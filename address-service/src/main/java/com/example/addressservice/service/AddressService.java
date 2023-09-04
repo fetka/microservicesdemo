@@ -1,11 +1,11 @@
-package service;
+package com.example.addressservice.service;
 
-import entity.Address;
+import com.example.addressservice.entity.Address;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.AddressRepo;
-import response.AddressResponse;
+import com.example.addressservice.repository.AddressRepo;
+import com.example.addressservice.response.AddressResponse;
 
 import java.util.ArrayList;
 import java.util.List;

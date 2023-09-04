@@ -1,20 +1,8 @@
-package entity;
+package com.example.addressservice.response;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "address")
-public class Address {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+public class AddressResponse {
     private int id;
-
-    @Column(name = "city")
     private String city;
-
-    @Column(name = "state")
     private String state;
 
     public int getId() {
@@ -39,4 +27,5 @@ public class Address {
 
     public void setState(String state) {
         this.state = state;
-    }}
+    }
+}

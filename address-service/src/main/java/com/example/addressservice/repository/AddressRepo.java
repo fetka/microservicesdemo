@@ -1,6 +1,6 @@
-package repository;
+package com.example.addressservice.repository;
 
-import entity.Address;
+import com.example.addressservice.entity.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

@@ -1,13 +1,13 @@
-package controller;
+package com.example.addressservice.controller;
 
+import com.example.addressservice.response.AddressResponse;
+import com.example.addressservice.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import response.AddressResponse;
-import service.AddressService;
 
 import java.util.List;
 
@@ -22,6 +22,11 @@ public class AddressController {
         System.out.println(employeeId);
         AddressResponse addressResponse = addressService.findAddressByEmployeeId(employeeId);
         return ResponseEntity.status(HttpStatus.OK).body(addressResponse);
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
     }
 
     @GetMapping("/address/all")
