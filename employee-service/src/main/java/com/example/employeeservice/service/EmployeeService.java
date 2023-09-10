@@ -1,6 +1,6 @@
 package com.example.employeeservice.service;
 
-import com.example.employeeservice.AddressClient;
+import com.example.employeeservice.feignclient.AddressClient;
 import com.example.employeeservice.entity.Employee;
 import com.example.employeeservice.repository.EmployeeRepo;
 import com.example.employeeservice.response.AddressResponse;
