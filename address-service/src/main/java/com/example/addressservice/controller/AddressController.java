@@ -5,9 +5,7 @@ import com.example.addressservice.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +23,7 @@ public class AddressController {
     }
 
     @GetMapping("/hello")
-    public String hello(){
+    public String hello() {
         return "hello";
     }
 
@@ -33,5 +31,10 @@ public class AddressController {
     public ResponseEntity<AddressResponse> getAddress() {
         List<AddressResponse> addressResponseList = addressService.getAddresses();
         return ResponseEntity.status(HttpStatus.OK).body(addressResponseList.get(0));
+    }
+
+    @RequestMapping(value = "/custom", method = RequestMethod.POST)
+    public String custom() {
+        return "custom";
     }
 }
