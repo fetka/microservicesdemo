@@ -10,7 +10,7 @@ class CommandHelloWorldTest {
 
     @Test
     public void givenInputBobAndDefaultSettings_whenCommandExecuted_thenReturnHelloBob(){
-        assertThat(new CommandHelloWorld("Bob").execute(), equalTo("Hello Bob!"));
+        assertThat(new CommandHelloWorld("Bob").execute(), equalTo("Hello Bob and Bobek!"));
     }
 
 }
